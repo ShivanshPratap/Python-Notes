@@ -53,8 +53,10 @@ dt_mtn = datetime.datetime.now()
 
 mtn_tz = pytz.timezone('US/Mountain')
 dt_mtn = mtn_tz.localize(dt_mtn)
-
 # print(dt_mtn)
+
+for tz in pytz.all_timezones:   #print all the timezone
+  print(tz)               
 
 dt_east = dt_mtn.astimezone(pytz.timezone('US/Eastern'))
 # print(dt_east)
